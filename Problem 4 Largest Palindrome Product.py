@@ -12,11 +12,13 @@ def palin(x,y):
 # This function starts at the highest numbers of i and j and decrements down until there is a valid palindrome
 # Then it returns the product of them, which will be the largest palindrome
 def check():
+    num = []
     for i in reversed(range(100,1000)):
         for j in reversed(range(100,1000)):
             #Check to see if its a valid palindrome
             if(palin(i,j)):
-                return(i*j)
+                num.append(i*j)
+    return max(num)
                 
                 
 # Calls the function check which will run through all permutations until there is a valid palindrome
